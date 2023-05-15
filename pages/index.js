@@ -15,11 +15,10 @@ const StyledSwiper = styled(Swiper)`
   width: 100%;
   height: 100%;
   text-align: center;
-  background: orange;
+  background: black;
 `;
 
 const StyledSwiperSlide = styled(SwiperSlide)`
-  background: black;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -61,7 +60,7 @@ export default function HomePage() {
       <>
         {loading && <div>wait a second...</div>}
         {error && <div>(`problem in http: ${error}`)</div>}
-        <Swiper
+        <StyledSwiper
           enabled={true}
           id={"swiper"}
           loop={true}
@@ -75,12 +74,11 @@ export default function HomePage() {
           }}
           grabCursor={true}
           centeredSlides={true}
-          // initialSlide={slug}
+          initialSlide={0}
           lazyPreloadPrevNext={8}
         >
           {data.map((hero) => (
-            <SwiperSlide key={hero.id} id={`swiperSlide${hero.id}`}>
-              {/* {<p>1234</p>} */}
+            <StyledSwiperSlide key={hero.id} id={`swiperSlide${hero.id}`}>
               <Image
                 loading="eager"
                 src={hero.images.md}
@@ -89,17 +87,9 @@ export default function HomePage() {
                 height={527}
                 onClick={() => console.log("click")}
               />
-            </SwiperSlide>
+            </StyledSwiperSlide>
           ))}
-        </Swiper>
-        {/* {data.map((hero) => (
-          <Image
-            src={hero.images.md}
-            alt={hero.name}
-            height={500}
-            width={300}
-          ></Image>
-        ))} */}
+        </StyledSwiper>
       </>
     );
   }
