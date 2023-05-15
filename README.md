@@ -1,3 +1,9 @@
+README:
+
+Just a little project to try out different futures of SwiperJS
+
+The usual default text:
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
