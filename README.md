@@ -1,6 +1,6 @@
 README:
 
-Just a little project to try out different futures of SwiperJS
+Just a little project to try out different features of SwiperJS
 
 The usual default text:
 
