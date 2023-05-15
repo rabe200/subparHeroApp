@@ -23,3 +23,15 @@ const nextConfig = {
 };
 
 module.exports = nextConfig;
+module.exports = {
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "cdn.jsdelivr.net",
+        port: "",
+        pathname: "/gh/akabab/**",
+      },
+    ],
+  },
+};
